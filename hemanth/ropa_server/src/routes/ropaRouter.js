@@ -5,7 +5,7 @@ var ropaRouter = express.Router();
 // assingning model to Person 
 var Person = require('../models/Person');
 
-ropaRouter.route('/add/new').post( (req, res, next) => {
+ropaRouter.route('/add/new').post((req, res) => {
 	var person = new Person(req.body);
 		person.save()
 	.then(person => {
