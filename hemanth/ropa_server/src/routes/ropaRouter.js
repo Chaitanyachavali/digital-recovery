@@ -6,7 +6,7 @@ var ropaRouter = express.Router();
 var Person = require('../models/Person');
 
 ropaRouter.route('/add/new').post((req, res) => {
-	var person = new Person(req.body);
+	var person = new Person(req.body.person);
 		person.save()
 	.then(person => {
 		res.status(200).json('Person Data added successfully');
@@ -15,16 +15,23 @@ ropaRouter.route('/add/new').post((req, res) => {
 		res.status(400).send("unable to save in Database");
 	});
 });
-
-ropaRouter.route('/').get(function (req,res) {
-	Person.find(function (err, itms) {
+ropaRouter.route('/').get((req,res) => {
+	Person.find( (err, itms) => {
 		if(err){
 			console.log(err);
 		}
-		else {
+		else { 
 			res.json(itms);
 		}
 	});
+});
+
+ropaRouter.route('/delete/:id').get((req, res) => {
+	Person.findByIdAndRemove({_id: req.params.id},
+		(err, persondetails) => {
+			if(err) res.json(err);
+			else res.json('successfully removed');
+		});
 });
 
 module.exports = ropaRouter;
@@ -41,3 +48,4 @@ module.exports = ropaRouter;
 // 		res.status(400).send("unable to save in Database");
 // 	});
 // });
+
