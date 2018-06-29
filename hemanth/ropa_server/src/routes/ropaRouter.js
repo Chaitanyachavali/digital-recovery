@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var ropaRouter = express.Router();
 
-// assingning model to Person 
+// assingning model to Person
 var Person = require('../models/Person');
 
 ropaRouter.route('/add/new').post((req, res) => {
