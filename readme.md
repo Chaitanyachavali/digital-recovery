@@ -1,18 +1,3 @@
-## This text is referred to everyone in this project
-- Here `I` means `Hemanth`
-- Let's make one thing clear I understand that everytime this project will not be your Priority.
-- But the work done is not up to the mark.
-- I believed in `Developers Team` because we will be able to complete the task.
-- See man due to repeatedly not honouring the commitments and not able to perform the task in time.
-- I think everyoone in the team has "over-confidence" and "the project is not that much intrested" or "not up to your mark"
-- No one is having the feeling of "OUR_PROJECT" in this task.
-- So If any will see this then you can call me.
-- Highly Doubt this.
-- Please call me if you see this.
-
-
-
-
 
 # Please follow these given guidelines in developing your CRUD application
 **Note**: Through out the document `I` means `developers Team`
